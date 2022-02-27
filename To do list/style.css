@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    120deg,
+    rgb(223, 177, 156),
+    rgb(240, 216, 171)
+  );
+  color: white;
+  font-family: "poppins" sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form button {
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+}
+form button :hover {
+  background-color: wheat;
+  column-rule: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+.todo li {
+  width: 30%;
+  list-style: none;
+}
+.trash-btn,
+.complete-btn {
+  background-color: #ff6f47;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+}
+.complete-btn {
+  background-color: greenyellow;
+}
+.todo li {
+  flex: 1;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.fa-check,
+.fa-trash-alt {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5rem;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #ff6f47;
+  /* font-family: "Poppins", sans-serif; */
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  cursor: pointer;
+  pointer-events: none;
+}
+/* Transition */
+/*
+.select:hover::after {
+  transform: scale(1.5);
+}
+*/
